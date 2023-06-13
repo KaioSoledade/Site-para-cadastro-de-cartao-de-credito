@@ -100,6 +100,14 @@ button{
     flex-direction: column;
     justify-content: space-between;
 }
+.margin-direita{
+    margin:0 0 0 150px ;
+    transition: 0.5s;
+}
+.margin-esquerda{
+    margin: 0 150px 0 0;
+    transition: 0.5s;
+}
 .cartao1-em-uso{
     width: 450px;
     height: 250px;
@@ -113,25 +121,13 @@ button{
     background-repeat: no-repeat;
     background-position: center center;
 }
-.cartao1-sem-uso{
-    width: 450px;
-    height: 250px;
-    border-radius: 20px;
 
-    margin: 0 0 0 50px;
-    transition: 0.5s;
-
-    background-color: aqua;
-    background-image: url(bg-card-front.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
 .cartao2{
     width: 450px;
     height: 250px;
     border-radius: 20px;
 
+    transition: 0.5s;
 
     background-color: aqua;
     background-image: url(bg-card-back.png);
