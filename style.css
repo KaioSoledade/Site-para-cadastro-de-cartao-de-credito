@@ -63,3 +63,12 @@ body{
     border: 3px solid purple;
     font-size: 15px
 }
+
+.data-cvv .input-cvv{
+    width: 180px;
+}
+
+.data-cvv button{
+    height: 150px;
+
+}
