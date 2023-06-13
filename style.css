@@ -100,7 +100,7 @@ button{
     flex-direction: column;
     justify-content: space-between;
 }
-.cartao1-ativo{
+.cartao1-em-uso{
     width: 450px;
     height: 250px;
     border-radius: 20px;
@@ -113,7 +113,7 @@ button{
     background-repeat: no-repeat;
     background-position: center center;
 }
-.cartao1-passivo{
+.cartao1-sem-uso{
     width: 450px;
     height: 250px;
     border-radius: 20px;
