@@ -15,15 +15,17 @@ body{
 }
 
 .container1{
-    width: 25%;
+    width: 35%;
     height: 100%;
+
+    background-color: beige;
 
     
 
 }
 
 .container2{
-    width: 75%;
+    width: 65%;
     height: 100%;
 
     display: flex;
@@ -71,4 +73,52 @@ body{
 .data-cvv button{
     height: 150px;
 
+}
+.container1{
+    background-image: url(bg-main-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cartao-centralizado{
+    width: 900px;
+    height: 600px;
+
+    margin: 0 0 0 300px;
+
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cartao1{
+   
+    width: 500px;
+    height: 250px;
+    border-radius: 20px;
+
+   
+
+    background-color: aqua;
+    background-image: url(bg-card-front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.cartao2{
+    width: 500px;
+    height: 250px;
+    border-radius: 20px;
+
+
+    background-color: aqua;
+    background-image: url(bg-card-front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
