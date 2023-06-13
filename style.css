@@ -51,7 +51,7 @@ body{
 .label-input input{
     height: 50px;
     border-radius: 10px;
-    border: 3px solid purple;
+    border: 3px solid hsl(270, 3%, 87%);
     font-size: 15px
 }
 .data-cvv{
@@ -62,7 +62,7 @@ body{
     width: 80px;
     height: 50px;
     border-radius: 10px;
-    border: 3px solid purple;
+    border: 3px solid hsl(279, 6%, 55%);
     font-size: 15px
 }
 
@@ -70,8 +70,12 @@ body{
     width: 180px;
 }
 
-.data-cvv button{
-    height: 150px;
+button{
+    height: 60px;
+    border-radius: 20px;
+
+    background-color:  hsl(278, 68%, 11%);
+    color: white;
 
 }
 .container1{
@@ -96,13 +100,26 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-.cartao1{
-   
-    width: 500px;
+.cartao1-ativo{
+    width: 450px;
     height: 250px;
     border-radius: 20px;
 
-   
+    transition: 0.5s;
+
+    background-color: aqua;
+    background-image: url(bg-card-front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.cartao1-passivo{
+    width: 450px;
+    height: 250px;
+    border-radius: 20px;
+
+    margin: 0 0 0 50px;
+    transition: 0.5s;
 
     background-color: aqua;
     background-image: url(bg-card-front.png);
@@ -111,13 +128,13 @@ body{
     background-position: center center;
 }
 .cartao2{
-    width: 500px;
+    width: 450px;
     height: 250px;
     border-radius: 20px;
 
 
     background-color: aqua;
-    background-image: url(bg-card-front.png);
+    background-image: url(bg-card-back.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
