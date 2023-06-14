@@ -11,7 +11,7 @@
         <div class="cartao-centralizado">
             <div class="card1">
                 <div class="cartao1-em-uso" id="cartaoNumber1">
-                    <p class="cartao1-numeros"></p>
+                    <p class="cartao1-numeros">123456789</p>
                     <div class="nome-data"></div>
                 </div>
             </div>
@@ -35,22 +35,22 @@
             
             <div class="label-input">
                 <label for="">Card Number</label>
-                <input type="text" name="" id="InputTipo1" ondblclick="ativar" placeholder="1234 5678 9123 0000">
+                <input type="text" id="InputTipo1.1" placeholder="1234 5678 9123 0000">
             </div>
             
 
             <div class="data-cvv">
                 <div>
                    <label for=""></label>
-                    <input type="text" placeholder="MM">
+                    <input type="text" id="InputTipo2" placeholder="MM">
 
                     <label for=""></label>  
-                    <input type="text" placeholder="YY"> 
+                    <input type="text" id="InputTipo2.1" placeholder="YY"> 
                 </div>
                 
 
                 <label for=""></label>
-                <input class="input-cvv" type="text" placeholder="CVV">
+                <input class="input-cvv" id="InputTipo2.2" type="text" placeholder="CVV">
             </div>
             
             <button class="sumit" onclick="submit()">Confirm</button>
