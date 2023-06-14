@@ -143,3 +143,7 @@ button{
     font-size: 25px;
     
 }
+
+.spaced-input {
+    letter-spacing: 2em;
+  }

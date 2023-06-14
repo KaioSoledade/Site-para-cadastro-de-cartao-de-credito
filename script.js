@@ -61,3 +61,17 @@ function updateOutput() {
     var output = document.getElementById('ImpriNumeros');
     output.innerText = input.value;
   }
+
+
+
+  function updateOutput() {
+    var input = document.getElementById('InputTipo1.1');
+    var output = document.getElementById('ImpriNumeros');
+    
+    var value = input.value.replace(/\s/g, '');
+    var formattedValue = value.match(/.{1,4}/g).join(' ');
+    
+    output.textContent = formattedValue;
+    output.classList.add('spaced-text');
+
+  }
