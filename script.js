@@ -53,3 +53,11 @@ InputTipo2e2.addEventListener('blur', function() {
     cartaoNumber1.classList.remove('margin-esquerda');
     cartaoNumber2.classList.remove('margin-direita');
 });
+
+var input = document.getElementById('InputTipo1.1').value
+
+function updateOutput() {
+    var input = document.getElementById('InputTipo1.1');
+    var output = document.getElementById('ImpriNumeros');
+    output.innerText = input.value;
+  }

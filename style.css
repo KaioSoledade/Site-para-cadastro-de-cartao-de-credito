@@ -112,6 +112,7 @@ button{
     width: 450px;
     height: 250px;
     border-radius: 20px;
+    padding: 2em;
 
     transition: 0.5s;
 
@@ -134,4 +135,11 @@ button{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.cartao1-numeros{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    
 }
