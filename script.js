@@ -87,3 +87,11 @@ function dataImprimir() {
     
     output.innerText = mesdia;
 }
+
+function cvvImprimir() {
+    var cvv = document.getElementById('InputTipo2.2').value;
+
+    var output = document.querySelector('.cvv');
+    
+    output.innerText = cvv;
+}
