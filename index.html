@@ -36,7 +36,7 @@
             
             <div class="label-input">
                 <label for="">Card Number</label>
-                <input type="text" id="InputTipo1.1" oninput="updateOutput()" onclick="formatCreditCardNumber(input)" placeholder="1234 5678 9123 0000">
+                <input type="text" id="InputTipo1.1" inputmode="numeric" pattern="[0-9]*" maxlength="16" oninput="updateOutput()" onclick="formatCreditCardNumber(input)" placeholder="1234 5678 9123 0000">
             </div>
             
 
