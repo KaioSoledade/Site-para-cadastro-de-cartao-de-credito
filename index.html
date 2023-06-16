@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
     <section class="container1">
@@ -44,18 +48,20 @@
             
 
             <div class="data-cvv">
-                <div>
-                   <label for=""></label>
-                    <input type="text" id="InputTipo2" maxlength="2" oninput="dataImprimir()" placeholder="MM">
-
-                    <label for=""></label>  
-                    <input type="text" id="InputTipo2.1" maxlength="2" oninput="dataImprimir()" placeholder="YY"> 
+                <div class="data-ajuste">
+                   <label for="" class="label-fraco">Exp. Date (MM/YY)</label>
+                   <div>
+                        <input type="text" id="InputTipo2" maxlength="2" oninput="dataImprimir()" placeholder="MM">
+                        <input type="text" id="InputTipo2.1" maxlength="2" oninput="dataImprimir()" placeholder="YY"> 
+                   </div>
                 </div>
                 
-
-                <label for=""></label>
-                <input class="input-cvv" maxlength="3" oninput="cvvImprimir()" id="InputTipo2.2" type="text" placeholder="CVV">
-            </div>
+                <div class="data-ajuste">
+                    <label for="" class="label-fraco">CVC</label>
+                    <input class="input-cvv" maxlength="3" oninput="cvvImprimir()" id="InputTipo2.2" type="text" placeholder="123">
+                </div>
+                </div>
+                
             
             <button class="sumit" onclick="submit()">Confirm</button>
 

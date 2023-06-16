@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 body{
@@ -34,10 +35,10 @@ body{
 }
 
 .cadastro{
-    width: 400px;
-    height: 500px;
+    width: 450px;
+    height: 600px;
 
-    background-color: bisque;
+    background-color: ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,7 +52,7 @@ body{
 .label-input input{
     height: 50px;
     border-radius: 10px;
-    border: 3px solid hsl(270, 3%, 87%);
+    border: 3px solid hsl(279, 6%, 55%);
     font-size: 15px
 }
 .data-cvv{
@@ -64,6 +65,13 @@ body{
     border-radius: 10px;
     border: 3px solid hsl(279, 6%, 55%);
     font-size: 15px
+}
+.label-fraco{
+    color: rgb(119, 115, 115);
+}
+.data-ajuste{
+    display: flex;
+    flex-direction: column;
 }
 
 .data-cvv .input-cvv{
@@ -123,6 +131,8 @@ button{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
+    box-shadow: 5px 40px 100px black;
 }
 
 .cartao2{
@@ -140,6 +150,8 @@ button{
 
     display: flex;
     justify-content: end;
+
+    box-shadow: 5px 40px 80px black;
 }
 
 .cvv{
