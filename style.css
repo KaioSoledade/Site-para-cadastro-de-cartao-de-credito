@@ -137,6 +137,16 @@ button{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
+    display: flex;
+    justify-content: end;
+}
+
+.cvv{
+    margin: 110px 45px ;
+
+    font-size: 25px;
+    color: white;
 }
 
 .cartao1-numeros{
