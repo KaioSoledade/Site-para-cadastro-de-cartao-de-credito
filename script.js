@@ -78,15 +78,12 @@ function nomeImprimir() {
 
 }
 
-function updateOutput() {
-    var input = document.getElementById('InputTipo2');
+function dataImprimir() {
+    var dia = document.getElementById('InputTipo2').value;
+    var mes = document.getElementById('InputTipo2.1').value;
+
+    var mesdia = dia + "/" + mes; 
     var output = document.querySelector('.dataImpri');
     
-    var value = input.value.replace(/\s/g, '').slice(0, 2); 
-    var formattedValue = value.match(/.{1,2}/g).join('/');
-    
-    output.textContent = formattedValue;
-    output.classList.add('spaced-text');
-
-
+    output.innerText = mesdia;
 }
