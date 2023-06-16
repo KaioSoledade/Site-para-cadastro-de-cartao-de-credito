@@ -24,23 +24,23 @@ InputTipo1e1.addEventListener('blur', function() {
 
 var InputTipo2 = document.getElementById('InputTipo2')
 InputTipo2.addEventListener('focus', function() {
-    cartaoNumber1.classList.add('margin-esquerda');
-    cartaoNumber2.classList.add('margin-direita');
+    cartaoNumber1.classList.add('margin-direita');
+    cartaoNumber2.classList.add('margin-esquerda');
 });
 InputTipo2.addEventListener('blur', function() {
-    cartaoNumber1.classList.remove('margin-esquerda');
-    cartaoNumber2.classList.remove('margin-direita');
+    cartaoNumber1.classList.remove('margin-direita');
+    cartaoNumber2.classList.remove('margin-esquerda');
 });
 
 
 var InputTipo2e1 = document.getElementById('InputTipo2.1')
 InputTipo2e1.addEventListener('focus', function() {
-    cartaoNumber1.classList.add('margin-esquerda');
-    cartaoNumber2.classList.add('margin-direita');
+    cartaoNumber1.classList.add('margin-direita');
+    cartaoNumber2.classList.add('margin-esquerda');
 });
 InputTipo2e1.addEventListener('blur', function() {
-    cartaoNumber1.classList.remove('margin-esquerda');
-    cartaoNumber2.classList.remove('margin-direita');
+    cartaoNumber1.classList.remove('margin-direita');
+    cartaoNumber2.classList.remove('margin-esquerda');
 });
 
 
@@ -56,15 +56,8 @@ InputTipo2e2.addEventListener('blur', function() {
 
 var input = document.getElementById('InputTipo1.1').value
 
+
 function updateOutput() {
-    var input = document.getElementById('InputTipo1.1');
-    var output = document.getElementById('ImpriNumeros');
-    output.innerText = input.value;
-  }
-
-
-
-  function updateOutput() {
     var input = document.getElementById('InputTipo1.1');
     var output = document.getElementById('ImpriNumeros');
     
@@ -74,4 +67,26 @@ function updateOutput() {
     output.textContent = formattedValue;
     output.classList.add('spaced-text');
 
-  }
+
+}
+
+function nomeImprimir() {
+    var input = document.getElementById('InputTipo1');
+    var output = document.querySelector('.nameImpri');
+    
+    output.innerText = input.value;
+
+}
+
+function updateOutput() {
+    var input = document.getElementById('InputTipo2');
+    var output = document.querySelector('.dataImpri');
+    
+    var value = input.value.replace(/\s/g, '').slice(0, 2); 
+    var formattedValue = value.match(/.{1,2}/g).join('/');
+    
+    output.textContent = formattedValue;
+    output.classList.add('spaced-text');
+
+
+}
