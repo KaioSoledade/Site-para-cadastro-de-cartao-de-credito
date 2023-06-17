@@ -189,3 +189,24 @@ label{
     justify-content: space-between;
     align-items: center;
 }
+
+.mensagem-sucesso{
+    width: 450px;
+    height: 550px;
+    padding: 100px 0 ;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.mensagem-sucesso button{
+    width: 100%;
+}
+.mensagem-sucesso h1{
+    font-size: 25px;
+}.mensagem-sucesso p{
+    font-size: 20px;
+}
