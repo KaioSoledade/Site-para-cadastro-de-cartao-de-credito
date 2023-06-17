@@ -190,14 +190,27 @@ label{
     align-items: center;
 }
 
-.mensagem-sucesso{
+.mensagem-sucesso-show{
+    width: 450px;
+    height: 550px;
+    padding: 100px 0 ;
+
+    background-color: white;
+    position: absolute;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.mensagem-sucesso-no{
     width: 450px;
     height: 550px;
     padding: 100px 0 ;
 
     background-color: white;
 
-    display: flex;
+    display: none;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -207,6 +220,9 @@ label{
 }
 .mensagem-sucesso h1{
     font-size: 25px;
-}.mensagem-sucesso p{
+    letter-spacing: 0.2em;
+}
+.mensagem-sucesso p{
     font-size: 20px;
+    color:  rgb(119, 115, 115);
 }
