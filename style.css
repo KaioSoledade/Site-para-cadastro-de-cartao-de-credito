@@ -215,14 +215,14 @@ label{
     flex-direction: column;
     align-items: center;
 }
-.mensagem-sucesso button{
+#sucesso button{
     width: 100%;
 }
-.mensagem-sucesso h1{
+#sucesso h1{
     font-size: 25px;
     letter-spacing: 0.2em;
 }
-.mensagem-sucesso p{
+#sucesso p{
     font-size: 20px;
     color:  rgb(119, 115, 115);
 }
