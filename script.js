@@ -95,3 +95,19 @@ function cvvImprimir() {
     
     output.innerText = cvv;
 }
+
+function sucesso(){
+    var mensagem = document.querySelector('#sucesso')
+
+    mensagem.classList.remove('mensagem-sucesso-no')
+    mensagem.classList.add('mensagem-sucesso-show')
+}
+
+function confirme(){
+    var mensagem = document.querySelector('#sucesso')
+
+    mensagem.classList.remove('mensagem-sucesso-show')
+    mensagem.classList.add('mensagem-sucesso-no')
+    
+    location.reload
+}
