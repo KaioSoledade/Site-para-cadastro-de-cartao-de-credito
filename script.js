@@ -103,11 +103,33 @@ function sucesso(){
     mensagem.classList.add('mensagem-sucesso-show')
 }
 
+function submit(){
+    var input1 = document.querySelector('.InputTipo1').value
+    var input1e1 = document.querySelector('.InputTipo1.1').value
+    var input2 = document.querySelector('.InputTipo2').value
+    var input2e1 = document.querySelector('.InputTipo2.1').value
+    var input2e2 = document.querySelector('.InputTipo2.2').value
+
+    var mensagem = document.querySelector('#sucesso')
+    if(mensagem !== ""){
+        mensagem.classList.remove('mensagem-sucesso-no')
+        mensagem.classList.add('mensagem-sucesso-show')
+
+    } else{
+       document.querySelector('.label-email').innerHTML = 'Coloque um email valido!'
+       document.querySelector('#label').classList.add('label-email-2')
+       document.querySelector('#label').classList.remove('label-email')
+       document.querySelector('#label').innerHTML = 'Coloque um email valido!'
+    }
+ 
+ }
+
+
 function confirme(){
     var mensagem = document.querySelector('#sucesso')
 
     mensagem.classList.remove('mensagem-sucesso-show')
     mensagem.classList.add('mensagem-sucesso-no')
     
-    location.reload
+    location.reload()
 }
