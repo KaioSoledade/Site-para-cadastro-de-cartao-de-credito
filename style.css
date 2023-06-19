@@ -160,6 +160,9 @@ label{
 
     box-shadow: 5px 40px 80px black;
 }
+.data-ajuste input{
+    margin: 0.5em 0 0.5em 0;
+}
 
 .cvv{
     margin: 110px 45px ;
@@ -226,4 +229,13 @@ label{
 #sucesso p{
     font-size: 20px;
     color:  rgb(119, 115, 115);
+}
+
+
+.erro{
+    color: rgb(243, 55, 55);
+    font-size: 15px;
+}
+.sem-erro{
+    display: none;
 }

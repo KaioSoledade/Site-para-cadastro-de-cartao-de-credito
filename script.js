@@ -117,7 +117,8 @@ function submit(){
     var mensagens = [];
 
     if (!input1) {
-    mensagens.push("O input 1 não foi preenchido.");
+        document.querySelector('erro1').classList.remove('.sem-erro')
+        document.querySelector('erro1').classList.add('.erro')
     }
 
     if (!input1e1) {
