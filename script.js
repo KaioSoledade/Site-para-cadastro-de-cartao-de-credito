@@ -103,51 +103,57 @@ function sucesso(){
     mensagem.classList.add('mensagem-sucesso-show')
 }
 
-function submit(){
-    var input1 = document.querySelector('.InputTipo1').value
-    var input1e1 = document.querySelector('.InputTipo1.1').value
-    var input2 = document.querySelector('.InputTipo2').value
-    var input2e1 = document.querySelector('.InputTipo2.1').value
-    var input2e2 = document.querySelector('.InputTipo2.2').value
-
-    // Obtendo os valores dos inputs do formulário
-    
-
+function submit() {
+    var input1 = document.querySelector('.InputTipo1').value;
+    var input1e1 = document.querySelector('.InputTipo1.1').value;
+    var input2 = document.querySelector('.InputTipo2').value;
+    var input2e1 = document.querySelector('.InputTipo2.1').value;
+    var input2e2 = document.querySelector('.InputTipo2.2').value;
+  
     // Verificando cada input separadamente
-    var mensagens = [];
-
-    if (!input1) {
-        document.querySelector('erro1').classList.remove('.sem-erro')
-        document.querySelector('erro1').classList.add('.erro')
+    var erro = false;
+  
+    if (input1 !== "") {
+      document.querySelector('#erro1').classList.remove('sem-erro');
+      document.querySelector('#erro1').classList.add('erro');
+      erro = true;
     }
-
-    if (!input1e1) {
-    mensagens.push("O input 2 não foi preenchido.");
+  
+    if (input1e1 !== "") {
+      document.querySelector('#erro1e1').classList.remove('sem-erro');
+      document.querySelector('#erro1e1').classList.add('erro');
+      erro = true;
     }
-
-    if (!input2) {
-    mensagens.push("O input 3 não foi preenchido.");
+  
+    if (input2 !== "") {
+      document.querySelector('#erro2').classList.remove('sem-erro');
+      document.querySelector('#erro2').classList.add('erro');
+      erro = true;
     }
-
-    if (!input2e1) {
-    mensagens.push("O input 4 não foi preenchido.");
+  
+    if (input2e1 !== "") {
+      document.querySelector('#erro2e1').classList.remove('sem-erro');
+      document.querySelector('#erro2e1').classList.add('erro');
+      erro = true;
     }
-
-    if (!input2e2) {
-    mensagens.push("O input 5 não foi preenchido.");
+  
+    if (input2e2 !== "") {
+      document.querySelector('#erro2e2').classList.remove('sem-erro');
+      document.querySelector('#erro2e2').classList.add('erro');
+      erro = true;
     }
-
+  
     // Verificando se há mensagens de inputs não preenchidos
-    if (mensagens.length > 0) {
-    console.log("Faltam respostas nos seguintes inputs:");
-    console.log(mensagens);
+    if (erro) {
+      console.log("Faltam respostas em alguns inputs.");
     } else {
-    var mensagem = document.querySelector('#sucesso')
-
-    mensagem.classList.remove('mensagem-sucesso-no')
-    mensagem.classList.add('mensagem-sucesso-show')
+      var mensagem = document.querySelector('#sucesso');
+  
+      mensagem.classList.remove('mensagem-sucesso-no');
+      mensagem.classList.add('mensagem-sucesso-show');
     }
- }
+  }
+  
 
 
 function confirme(){
