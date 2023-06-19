@@ -39,11 +39,13 @@
             <div class="label-input">
                 <label for="">Cardholder Name</label>
                 <input type="text" id="InputTipo1" oninput="nomeImprimir()" placeholder="Jane Appleseed"> 
+                <p class="erro1 erro">123</p>
             </div>
             
             <div class="label-input">
                 <label for="">Card Number</label>
                 <input type="text" id="InputTipo1.1" inputmode="numeric" pattern="[0-9]*" maxlength="16" oninput="updateOutput()" onclick="formatCreditCardNumber(input)" placeholder="1234 5678 9123 0000">
+                <p class="erro1e1 erro">123</p>
             </div>
             
 
@@ -54,16 +56,19 @@
                         <input type="text" id="InputTipo2" maxlength="2" oninput="dataImprimir()" placeholder="MM">
                         <input type="text" id="InputTipo2.1" maxlength="2" oninput="dataImprimir()" placeholder="YY"> 
                    </div>
+                   <p class="erro2 erro2e1 erro">123</p>
                 </div>
                 
                 <div class="data-ajuste">
                     <label for="" class="label-fraco">CVC</label>
                     <input class="input-cvv" maxlength="3" oninput="cvvImprimir()" id="InputTipo2.2" type="text" placeholder="123">
+                    <p class="erro2e2 erro">123</p>
                 </div>
+                
                 </div>
                 
             
-            <button class="sumit" onclick="sucesso()">Confirm</button>
+            <button class="sumit" onclick="submit()">Confirm</button>
 
         </div>
         <section class="mensagem-sucesso-no" id="sucesso">

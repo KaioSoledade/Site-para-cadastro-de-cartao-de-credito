@@ -87,6 +87,7 @@ button{
 
     background-color:  hsl(278, 68%, 11%);
     color: white;
+    cursor: pointer;
 
 }
 label{

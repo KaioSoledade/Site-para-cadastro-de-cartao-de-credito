@@ -141,7 +141,10 @@ function submit(){
     console.log("Faltam respostas nos seguintes inputs:");
     console.log(mensagens);
     } else {
-    console.log("Todos os inputs estão preenchidos.");
+    var mensagem = document.querySelector('#sucesso')
+
+    mensagem.classList.remove('mensagem-sucesso-no')
+    mensagem.classList.add('mensagem-sucesso-show')
     }
  }
 
