@@ -110,18 +110,39 @@ function submit(){
     var input2e1 = document.querySelector('.InputTipo2.1').value
     var input2e2 = document.querySelector('.InputTipo2.2').value
 
-    var mensagem = document.querySelector('#sucesso')
-    if(mensagem !== ""){
-        mensagem.classList.remove('mensagem-sucesso-no')
-        mensagem.classList.add('mensagem-sucesso-show')
+    // Obtendo os valores dos inputs do formulário
+    
 
-    } else{
-       document.querySelector('.label-email').innerHTML = 'Coloque um email valido!'
-       document.querySelector('#label').classList.add('label-email-2')
-       document.querySelector('#label').classList.remove('label-email')
-       document.querySelector('#label').innerHTML = 'Coloque um email valido!'
+    // Verificando cada input separadamente
+    var mensagens = [];
+
+    if (!input1) {
+    mensagens.push("O input 1 não foi preenchido.");
     }
- 
+
+    if (!input1e1) {
+    mensagens.push("O input 2 não foi preenchido.");
+    }
+
+    if (!input2) {
+    mensagens.push("O input 3 não foi preenchido.");
+    }
+
+    if (!input2e1) {
+    mensagens.push("O input 4 não foi preenchido.");
+    }
+
+    if (!input2e2) {
+    mensagens.push("O input 5 não foi preenchido.");
+    }
+
+    // Verificando se há mensagens de inputs não preenchidos
+    if (mensagens.length > 0) {
+    console.log("Faltam respostas nos seguintes inputs:");
+    console.log(mensagens);
+    } else {
+    console.log("Todos os inputs estão preenchidos.");
+    }
  }
 
 
