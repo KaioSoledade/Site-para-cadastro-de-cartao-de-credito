@@ -222,19 +222,35 @@ const campos = document.querySelectorAll('.required');
 const spans = document.querySelectorAll('.span-required');
 
 function setError(index){
-    campos[index].style.border = '2px solid #e63636';
-    spans[index].style.display = 'block';
+    campos[index].style.border = '4px solid #e63636';
+    spans[index].classList.remove('escondido');
 }
 function removeError(index){
     campos[index].style.border = '';
-    spans[index].style.display = 'none';
+    spans[index].classList.add('escondido')
 }
 
 function nameValidate(){
-    if(campos[0].value.legth < 3){
+    if(campos[0].value.length < 3){
         setError(0);
     }
     else{
         removeError(0)
     }
 }
+
+
+var NumberCard = document.getElementById('InputTipo1.1');
+NumberCard.addEventListener("input", NumeroValidate);
+
+function NumeroValidate(){
+    var input = NumberCard.value;
+    var numericInput = input.replace(/\D/g, ""); // Remove caracteres não numéricos
+    
+    if (numericInput.length < 16) {
+        setError(1);
+    } else {
+        removeError(1);
+    }
+}
+

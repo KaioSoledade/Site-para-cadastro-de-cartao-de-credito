@@ -39,13 +39,13 @@
             <div class="label-input">
                 <label for="">Cardholder Name</label>
                 <input type="text" class="required" id="InputTipo1" oninput="nameValidate()" placeholder="Jane Appleseed"> 
-                <span id="erro1" class="span-required">erro</span>
+                <span id="erro1" class="span-required escondido">Nome de cadastro deve ter 3 caracteres</span>
             </div>
             
             <div class="label-input">
                 <label for="">Card Number</label>
                 <input type="text" id="InputTipo1.1" class="required" inputmode="numeric" pattern="[0-9]*" maxlength="16" oninput="updateOutput()" placeholder="1234 5678 9123 0000">
-                <span id="erro1e1" class="span-required">erro</span>
+                <span id="erro1e1" class="span-required escondido">Numero do cartão deve ter 16 digitos</span>
             </div>
             
 
@@ -56,13 +56,13 @@
                         <input type="text" class="required" id="InputTipo2" maxlength="2" oninput="" placeholder="MM">
                         <input type="text" class="required" id="InputTipo2.1" maxlength="2" oninput="" placeholder="YY"> 
                    </div>
-                   <span id="erro2 erro2e1" class="span-required">erro</span>
+                   <span id="erro2 erro2e1" class="span-required escondido">Coloque uma data valida</span>
                 </div>
                 
                 <div class="data-ajuste">
                     <label for="" class="label-fraco">CVC</label>
                     <input class="input-cvv required" maxlength="3" oninput="" id="InputTipo2.2" type="text" placeholder="123">
-                    <span id="erro2e2" class="span-required">erro</span>
+                    <span id="erro2e2" class="span-required escondido">Deve ter 3 digitos aqui</span>
                 </div>
                 
                 </div>
