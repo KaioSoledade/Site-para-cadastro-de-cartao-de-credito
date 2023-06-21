@@ -70,6 +70,9 @@ function updateOutput() {
 
 }
 
+// Impressão da NOME do input para o cartão
+const InputName = document.querySelector('#InputTipo1')
+InputName.addEventListener("input", nomeImprimir)
 function nomeImprimir() {
     var input = document.getElementById('InputTipo1');
     var output = document.querySelector('.nameImpri');
@@ -78,6 +81,11 @@ function nomeImprimir() {
 
 }
 
+// Impressão da DATA do input para o cartão
+const InputData = document.querySelector('#InputTipo2')
+InputData.addEventListener("input", dataImprimir)
+const InputData1 = document.querySelector('#InputTipo2.1')
+InputData1.addEventListener("input", dataImprimir)
 function dataImprimir() {
     var dia = document.getElementById('InputTipo2').value;
     var mes = document.getElementById('InputTipo2.1').value;
@@ -88,6 +96,9 @@ function dataImprimir() {
     output.innerText = mesdia;
 }
 
+// Impressão da CVV do input para o cartão
+const InputCvv = document.querySelector('#InputTipo2.2')
+InputCvv.addEventListener("input", cvvImprimir)
 function cvvImprimir() {
     var cvv = document.getElementById('InputTipo2.2').value;
 
