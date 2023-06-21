@@ -10,7 +10,7 @@ InputTipo1.addEventListener('blur', function() {
     cartaoNumber2.classList.remove('margin-esquerda');
 });
 
-
+//Movimentação do cartão (descobri uma forma mais resumida que essa)
 var InputTipo1e1 = document.getElementById('InputTipo1.1')
 InputTipo1e1.addEventListener('focus', function() {
     cartaoNumber1.classList.add('margin-direita');
@@ -20,8 +20,6 @@ InputTipo1e1.addEventListener('blur', function() {
     cartaoNumber1.classList.remove('margin-direita');
     cartaoNumber2.classList.remove('margin-esquerda');
 });
-
-
 var InputTipo2 = document.getElementById('InputTipo2')
 InputTipo2.addEventListener('focus', function() {
     cartaoNumber1.classList.add('margin-direita');
@@ -31,8 +29,6 @@ InputTipo2.addEventListener('blur', function() {
     cartaoNumber1.classList.remove('margin-direita');
     cartaoNumber2.classList.remove('margin-esquerda');
 });
-
-
 var InputTipo2e1 = document.getElementById('InputTipo2.1')
 InputTipo2e1.addEventListener('focus', function() {
     cartaoNumber1.classList.add('margin-direita');
@@ -42,8 +38,6 @@ InputTipo2e1.addEventListener('blur', function() {
     cartaoNumber1.classList.remove('margin-direita');
     cartaoNumber2.classList.remove('margin-esquerda');
 });
-
-
 var InputTipo2e2 = document.getElementById('InputTipo2.2')
 InputTipo2e2.addEventListener('focus', function() {
     cartaoNumber1.classList.add('margin-esquerda');
@@ -54,21 +48,27 @@ InputTipo2e2.addEventListener('blur', function() {
     cartaoNumber2.classList.remove('margin-direita');
 });
 
-var input = document.getElementById('InputTipo1.1').value
 
+var input = document.getElementById('InputTipo1.1');
+
+input.onkeydown = function(event) {
+  var key = event.key;
+  if (key !== "Backspace" && key !== "Delete" && !/^\d$/.test(key)) {
+    event.preventDefault();
+  }
+};
 
 function updateOutput() {
     var input = document.getElementById('InputTipo1.1');
     var output = document.getElementById('ImpriNumeros');
     
-    var value = input.value.replace(/\s/g, '').slice(0, 16); 
-    var formattedValue = value.match(/.{1,4}/g).join(' ');
+    var value = input.value.replace(/\D/g, '').slice(0, 16);
+    var formattedValue = value.replace(/(\d{4})/g, '$1 ').trim();
     
     output.textContent = formattedValue;
     output.classList.add('spaced-text');
-
-
 }
+
 
 // Impressão da NOME do input para o cartão
 const InputName = document.querySelector('#InputTipo1')
@@ -80,11 +80,10 @@ function nomeImprimir() {
     output.innerText = input.value;
 
 }
-
 // Impressão da DATA do input para o cartão
-const InputData = document.querySelector('#InputTipo2')
+const InputData = document.getElementById('InputTipo2')
 InputData.addEventListener("input", dataImprimir)
-const InputData1 = document.querySelector('#InputTipo2.1')
+const InputData1 = document.getElementById('InputTipo2.1')
 InputData1.addEventListener("input", dataImprimir)
 function dataImprimir() {
     var dia = document.getElementById('InputTipo2').value;
@@ -95,9 +94,8 @@ function dataImprimir() {
     
     output.innerText = mesdia;
 }
-
 // Impressão da CVV do input para o cartão
-const InputCvv = document.querySelector('#InputTipo2.2')
+const InputCvv = document.getElementById('InputTipo2.2')
 InputCvv.addEventListener("input", cvvImprimir)
 function cvvImprimir() {
     var cvv = document.getElementById('InputTipo2.2').value;
@@ -106,6 +104,10 @@ function cvvImprimir() {
     
     output.innerText = cvv;
 }
+
+
+
+
 
 function sucesso(){
     var mensagem = document.querySelector('#sucesso')
