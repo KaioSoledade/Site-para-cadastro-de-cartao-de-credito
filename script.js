@@ -1,6 +1,8 @@
+
+
+//Movimentação do cartão (descobri uma forma mais resumida que essa)
 var InputTipo1 = document.getElementById('InputTipo1');
 var cartaoNumber1 = document.querySelector('#cartaoNumber1')
-
 InputTipo1.addEventListener('focus', function() {
     cartaoNumber1.classList.add('margin-direita');
     cartaoNumber2.classList.add('margin-esquerda');
@@ -9,8 +11,6 @@ InputTipo1.addEventListener('blur', function() {
     cartaoNumber1.classList.remove('margin-direita');
     cartaoNumber2.classList.remove('margin-esquerda');
 });
-
-//Movimentação do cartão (descobri uma forma mais resumida que essa)
 var InputTipo1e1 = document.getElementById('InputTipo1.1')
 InputTipo1e1.addEventListener('focus', function() {
     cartaoNumber1.classList.add('margin-direita');
@@ -49,25 +49,26 @@ InputTipo2e2.addEventListener('blur', function() {
 });
 
 
-var input = document.getElementById('InputTipo1.1');
 
+// Input responsvel pelo numero do cartão
+var input = document.getElementById('InputTipo1.1');
 input.onkeydown = function(event) {
   var key = event.key;
   if (key !== "Backspace" && key !== "Delete" && !/^\d$/.test(key)) {
     event.preventDefault();
-  }
+  }//Responsavel por não permitir Letras, somente Numeros
 };
-
 function updateOutput() {
     var input = document.getElementById('InputTipo1.1');
     var output = document.getElementById('ImpriNumeros');
     
-    var value = input.value.replace(/\D/g, '').slice(0, 16);
-    var formattedValue = value.replace(/(\d{4})/g, '$1 ').trim();
+    var value = input.value.replace(/\D/g, '').slice(0, 16); //Limite de 16 digitos
+    var formattedValue = value.replace(/(\d{4})/g, '$1 ').trim(); //Formato dividido em 4 blocos
     
     output.textContent = formattedValue;
     output.classList.add('spaced-text');
 }
+
 
 
 // Impressão da NOME do input para o cartão
@@ -80,6 +81,9 @@ function nomeImprimir() {
     output.innerText = input.value;
 
 }
+
+
+
 // Impressão da DATA do input para o cartão
 const InputData = document.getElementById('InputTipo2')
 InputData.addEventListener("input", dataImprimir)
@@ -94,6 +98,9 @@ function dataImprimir() {
     
     output.innerText = mesdia;
 }
+
+
+
 // Impressão da CVV do input para o cartão
 const InputCvv = document.getElementById('InputTipo2.2')
 InputCvv.addEventListener("input", cvvImprimir)
@@ -181,7 +188,6 @@ function submit() {
     }
 
     
-    // Repita o mesmo padrão para os outros campos de entrada e mensagens de erro
 
     // Verificando se há mensagens de inputs não preenchidos
     if (erro) {

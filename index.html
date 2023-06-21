@@ -39,13 +39,13 @@
             <div class="label-input">
                 <label for="">Cardholder Name</label>
                 <input type="text" class="required" id="InputTipo1" oninput="nameValidate()" placeholder="Jane Appleseed"> 
-                <p id="erro1" class="sem-erro">erro</p>
+                <span id="erro1" class="span-required">erro</span>
             </div>
             
             <div class="label-input">
                 <label for="">Card Number</label>
-                <input type="text" id="InputTipo1.1" inputmode="numeric" pattern="[0-9]*" maxlength="16" oninput="updateOutput()" onclick="formatCreditCardNumber(input)" placeholder="1234 5678 9123 0000">
-                <p id="erro1e1" class="sem-erro">erro</p>
+                <input type="text" id="InputTipo1.1" class="required" inputmode="numeric" pattern="[0-9]*" maxlength="16" oninput="updateOutput()" placeholder="1234 5678 9123 0000">
+                <span id="erro1e1" class="span-required">erro</span>
             </div>
             
 
@@ -53,16 +53,16 @@
                 <div class="data-ajuste">
                    <label for="" class="label-fraco">Exp. Date (MM/YY)</label>
                    <div>
-                        <input type="text" id="InputTipo2" maxlength="2" oninput="" placeholder="MM">
-                        <input type="text" id="InputTipo2.1" maxlength="2" oninput="" placeholder="YY"> 
+                        <input type="text" class="required" id="InputTipo2" maxlength="2" oninput="" placeholder="MM">
+                        <input type="text" class="required" id="InputTipo2.1" maxlength="2" oninput="" placeholder="YY"> 
                    </div>
-                   <p id="erro2 erro2e1" class="sem-erro">erro</p>
+                   <span id="erro2 erro2e1" class="span-required">erro</span>
                 </div>
                 
                 <div class="data-ajuste">
                     <label for="" class="label-fraco">CVC</label>
-                    <input class="input-cvv" maxlength="3" oninput="" id="InputTipo2.2" type="text" placeholder="123">
-                    <p id="erro2e2" class="sem-erro">erro</p>
+                    <input class="input-cvv required" maxlength="3" oninput="" id="InputTipo2.2" type="text" placeholder="123">
+                    <span id="erro2e2" class="span-required">erro</span>
                 </div>
                 
                 </div>
