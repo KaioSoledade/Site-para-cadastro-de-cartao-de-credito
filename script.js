@@ -267,4 +267,28 @@ function validateMonth() {
   }
 }
 
+var yearInput = document.getElementById('InputTipo2.1');
+yearInput.addEventListener("input", validateYear);
+
+function validateYear() {
+  var inputValue = parseInt(yearInput.value, 10);
+
+  if (isNaN(inputValue) || inputValue < 1907 || inputValue > 2023) {
+    setError(3); // Exibe a mensagem de erro para ano inválido
+  } else {
+    removeError(3); // Remove a mensagem de erro para ano inválido
+  }
+}
+
+var cvvInput = document.getElementById('InputTipo2.2')
+cvvInput.addEventListener("input", cvvValidate)
+function cvvValidate(){
+    if(campos[4].value.length < 3){
+        setError(4);
+    }
+    else{
+        removeError(4)
+    }
+}
+
 
