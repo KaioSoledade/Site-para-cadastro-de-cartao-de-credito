@@ -254,3 +254,17 @@ function NumeroValidate(){
     }
 }
 
+var monthInput = document.getElementById('InputTipo2');
+monthInput.addEventListener("input", validateMonth);
+
+function validateMonth() {
+  var inputValue = parseInt(monthInput.value, 10);
+
+  if (isNaN(inputValue) || inputValue < 1 || inputValue > 12) {
+    setError(2); // Exibe a mensagem de erro para mês inválido
+  } else {
+    removeError(2); // Remove a mensagem de erro para mês inválido
+  }
+}
+
+
