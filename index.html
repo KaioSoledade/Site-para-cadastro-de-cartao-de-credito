@@ -35,7 +35,7 @@
 
     </section>
     <section class="container2">
-        <div class="cadastro">
+        <form class="cadastro">
             <div class="label-input">
                 <label for="">Cardholder Name</label>
                 <input type="text" class="required" id="InputTipo1" oninput="nameValidate()" placeholder="Jane Appleseed"> 
@@ -69,15 +69,15 @@
             </div>
                 
             
-            <button class="sumit" onclick="submit()">Confirm</button>
+            <button class="sumit" id="Formulario" onclick="submit()">Confirm</button>
 
-        </div>
+        </form>
         <section class="mensagem-sucesso-no" id="sucesso">
          
             <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
             <h1>Thank you!</h1>
             <p> We've added your card details</p>
-            <button onclick="confirme()">Confirm</button>
+            <button id="confirmar" onclick="confirme()">Confirm</button>
 
         </section>
     </section>

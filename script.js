@@ -114,96 +114,6 @@ function cvvImprimir() {
 
 
 
-
-
-function sucesso(){
-    var mensagem = document.querySelector('#sucesso')
-
-    mensagem.classList.remove('mensagem-sucesso-no')
-    mensagem.classList.add('mensagem-sucesso-show')
-}
-function submit() {
-    var input1 = document.querySelector('#InputTipo1').value;
-    var input1e1 = document.querySelector('#InputTipo1.1').value;
-    var input2 = document.querySelector('#InputTipo2').value;
-    var input2e1 = document.querySelector('#InputTipo2.1').value;
-    var input2e2 = document.querySelector('#InputTipo2.2').value;
-
-    // Verificando cada input separadamente
-    var erro = false;
-
-    if (input1 == "") {
-        document.querySelector('#erro1').textContent = 'Por favor, preencha este campo.';
-        document.querySelector('#erro1').classList.remove('sem-erro');
-        document.querySelector('#erro1').classList.add('erro');
-        erro = true;
-    } else {
-        document.querySelector('#erro1').textContent = '';
-        document.querySelector('#erro1').classList.remove('erro');
-        document.querySelector('#erro1').classList.add('sem-erro');
-    }
-
-    if (input1e1 == "") {
-        document.querySelector('#erro1e1').textContent = 'Por favor, preencha este campo.';
-        document.querySelector('#erro1e1').classList.remove('sem-erro');
-        document.querySelector('#erro1e1').classList.add('erro');
-        erro = true;
-    } else {
-        document.querySelector('#erro1e1').textContent = '';
-        document.querySelector('#erro1e1').classList.remove('erro');
-        document.querySelector('#erro1e1').classList.add('sem-erro');
-    }
-
-    if (input2 == "") {
-        document.querySelector('#erro2').textContent = 'Por favor, preencha este campo.';
-        document.querySelector('#erro2').classList.remove('sem-erro');
-        document.querySelector('#erro2').classList.add('erro');
-        erro = true;
-    } else {
-        document.querySelector('#erro2').textContent = '';
-        document.querySelector('#erro2').classList.remove('erro');
-        document.querySelector('#erro2').classList.add('sem-erro');
-    }
-
-    if (input2e1 == "") {
-        document.querySelector('#erro2e1').textContent = 'Por favor, preencha este campo.';
-        document.querySelector('#erro2e1').classList.remove('sem-erro');
-        document.querySelector('#erro2e1').classList.add('erro');
-        erro = true;
-    } else {
-        document.querySelector('#erro2e1').textContent = '';
-        document.querySelector('#erro2e1').classList.remove('erro');
-        document.querySelector('#erro2e1').classList.add('sem-erro');
-    }
-
-    if (input2e2 == "") {
-        document.querySelector('#erro2e2').textContent = 'Por favor, preencha este campo.';
-        document.querySelector('#erro2e2').classList.remove('sem-erro');
-        document.querySelector('#erro2e2').classList.add('erro');
-        erro = true;
-    } else {
-        document.querySelector('#erro2e2').textContent = '';
-        document.querySelector('#erro2e2').classList.remove('erro');
-        document.querySelector('#erro2e2').classList.add('sem-erro');
-    }
-
-    
-
-    // Verificando se há mensagens de inputs não preenchidos
-    if (erro) {
-        console.log("Faltam respostas em alguns inputs.");
-    } else {
-        var mensagem = document.querySelector('#sucesso');
-
-        mensagem.classList.remove('mensagem-sucesso-no');
-        mensagem.classList.add('mensagem-sucesso-show');
-    }
-}
-
-
-  
-
-
 function confirme(){
     var mensagem = document.querySelector('#sucesso')
 
@@ -291,4 +201,44 @@ function cvvValidate(){
     }
 }
 
+var confirmButton = document.querySelector('.sumit');
+confirmButton.addEventListener('click', confirme);
+function submitForm(event) {
+    event.preventDefault(); // Impede a submissão do formulário
+  
+    // Resto do código de validação dos campos...
+  }
+  
+  // Aqui, substitua 'form' pelo seletor correto do seu formulário
+  const form = document.getElementById('seuFormulario');
+  form.addEventListener('submit', submitForm);
+  
 
+function submit(event) {
+    event.preventDefault(); // Impede a submissão do formulário
+  
+    // Verifica se todos os campos estão preenchidos corretamente
+    if (
+      campos[0].value.length >= 3 &&
+      NumberCard.value.replace(/\D/g, "").length === 16 &&
+      parseInt(monthInput.value, 10) >= 1 &&
+      parseInt(monthInput.value, 10) <= 12 &&
+      parseInt(yearInput.value, 10) >= 1907 &&
+      parseInt(yearInput.value, 10) <= 2023 &&
+      cvvInput.value.length === 3
+    ) {
+      // Todos os campos passaram na validação, exibe a mensagem de sucesso
+      document.getElementById("sucesso").style.display = "block";
+      form.reset(); // Limpa o formulário
+    } else {
+      // Algum campo não passou na validação, exiba as mensagens de erro
+      nameValidate();
+      NumeroValidate();
+      validateMonth();
+      validateYear();
+      cvvValidate();
+    }
+}
+
+
+  
