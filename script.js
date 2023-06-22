@@ -189,6 +189,10 @@ function cvvValidate() {
     }
 }
 
+
+
+var confirmButton = document.getElementById("Formulario");
+confirmButton.addEventListener("click", confirme);
 function confirme() {
     // Resto do código de validação dos campos...
   
@@ -203,8 +207,9 @@ function confirme() {
       cvvInput.value.length === 3
     ) {
       // Todos os campos passaram na validação, adiciona a classe "show" à seção de sucesso
-      document.getElementById("sucesso").classList.add("show");
-      form.reset(); // Limpa o formulário
+      document.getElementById("sucesso").classList.add("mensagem-sucesso-show");
+      document.getElementById("sucesso").classList.remove("mensagem-sucesso-no");
+
     } else {
       // Algum campo não passou na validação, exiba as mensagens de erro
       nameValidate();
@@ -215,6 +220,5 @@ function confirme() {
     }
   }
   
-  var confirmButton = document.getElementById("confirmar");
-  confirmButton.addEventListener("click", confirme);
+
   
