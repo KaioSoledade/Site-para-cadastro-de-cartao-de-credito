@@ -125,38 +125,31 @@ function confirme(){
 
 
 
-
-
-const form = document.getElementById('form');
 const campos = document.querySelectorAll('.required');
 const spans = document.querySelectorAll('.span-required');
 
-function setError(index){
+function setError(index) {
     campos[index].style.border = '4px solid #e63636';
     spans[index].classList.remove('escondido');
 }
-function removeError(index){
+function removeError(index) {
     campos[index].style.border = '';
-    spans[index].classList.add('escondido')
+    spans[index].classList.add('escondido');
 }
 
-function nameValidate(){
-    if(campos[0].value.length < 3){
+function nameValidate() {
+    if (campos[0].value.length < 3) {
         setError(0);
-    }
-    else{
-        removeError(0)
+    } else {
+        removeError(0);
     }
 }
-
 
 var NumberCard = document.getElementById('InputTipo1.1');
-NumberCard.addEventListener("input", NumeroValidate);
-
-function NumeroValidate(){
+NumberCard.addEventListener('input', NumeroValidate);
+function NumeroValidate() {
     var input = NumberCard.value;
     var numericInput = input.replace(/\D/g, ""); // Remove caracteres não numéricos
-    
     if (numericInput.length < 16) {
         setError(1);
     } else {
@@ -165,57 +158,39 @@ function NumeroValidate(){
 }
 
 var monthInput = document.getElementById('InputTipo2');
-monthInput.addEventListener("input", validateMonth);
-
+monthInput.addEventListener('input', validateMonth);
 function validateMonth() {
-  var inputValue = parseInt(monthInput.value, 10);
-
-  if (isNaN(inputValue) || inputValue < 1 || inputValue > 12) {
-    setError(2); // Exibe a mensagem de erro para mês inválido
-  } else {
-    removeError(2); // Remove a mensagem de erro para mês inválido
-  }
+    var inputValue = parseInt(monthInput.value, 10);
+    if (isNaN(inputValue) || inputValue < 1 || inputValue > 12) {
+        setError(2); // Exibe a mensagem de erro para mês inválido
+    } else {
+        removeError(2); // Remove a mensagem de erro para mês inválido
+    }
 }
 
 var yearInput = document.getElementById('InputTipo2.1');
-yearInput.addEventListener("input", validateYear);
-
+yearInput.addEventListener('input', validateYear);
 function validateYear() {
-  var inputValue = parseInt(yearInput.value, 10);
-
-  if (isNaN(inputValue) || inputValue < 1907 || inputValue > 2023) {
-    setError(3); // Exibe a mensagem de erro para ano inválido
-  } else {
-    removeError(3); // Remove a mensagem de erro para ano inválido
-  }
+    var inputValue = parseInt(yearInput.value, 10);
+    if (isNaN(inputValue) || inputValue < 1907 || inputValue > 2023) {
+        setError(3); // Exibe a mensagem de erro para ano inválido
+    } else {
+        removeError(3); // Remove a mensagem de erro para ano inválido
+    }
 }
 
-var cvvInput = document.getElementById('InputTipo2.2')
-cvvInput.addEventListener("input", cvvValidate)
-function cvvValidate(){
-    if(campos[4].value.length < 3){
+var cvvInput = document.getElementById('InputTipo2.2');
+cvvInput.addEventListener('input', cvvValidate);
+function cvvValidate() {
+    if (campos[4].value.length < 3) {
         setError(4);
-    }
-    else{
-        removeError(4)
+    } else {
+        removeError(4);
     }
 }
 
-var confirmButton = document.querySelector('.sumit');
-confirmButton.addEventListener('click', confirme);
-function submitForm(event) {
-    event.preventDefault(); // Impede a submissão do formulário
-  
+function confirme() {
     // Resto do código de validação dos campos...
-  }
-  
-  // Aqui, substitua 'form' pelo seletor correto do seu formulário
-  const form = document.getElementById('seuFormulario');
-  form.addEventListener('submit', submitForm);
-  
-
-function submit(event) {
-    event.preventDefault(); // Impede a submissão do formulário
   
     // Verifica se todos os campos estão preenchidos corretamente
     if (
@@ -227,8 +202,8 @@ function submit(event) {
       parseInt(yearInput.value, 10) <= 2023 &&
       cvvInput.value.length === 3
     ) {
-      // Todos os campos passaram na validação, exibe a mensagem de sucesso
-      document.getElementById("sucesso").style.display = "block";
+      // Todos os campos passaram na validação, adiciona a classe "show" à seção de sucesso
+      document.getElementById("sucesso").classList.add("show");
       form.reset(); // Limpa o formulário
     } else {
       // Algum campo não passou na validação, exiba as mensagens de erro
@@ -238,7 +213,8 @@ function submit(event) {
       validateYear();
       cvvValidate();
     }
-}
-
-
+  }
+  
+  var confirmButton = document.getElementById("confirmar");
+  confirmButton.addEventListener("click", confirme);
   
