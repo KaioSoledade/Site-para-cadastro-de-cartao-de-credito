@@ -192,8 +192,8 @@ function cvvValidate() {
 
 
 var confirmButton = document.getElementById("Formulario");
-confirmButton.addEventListener("click", confirme);
-function confirme() {
+confirmButton.addEventListener("click", submit);
+function submit() {
     // Resto do código de validação dos campos...
   
     // Verifica se todos os campos estão preenchidos corretamente

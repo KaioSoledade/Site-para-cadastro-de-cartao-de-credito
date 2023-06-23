@@ -101,7 +101,7 @@ label{
     font-size: 18px;
 }
 .container1{
-    background-image: url(bg-main-desktop.png);
+    background-image: url(imagens/bg-main-desktop.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -141,7 +141,7 @@ label{
     flex-direction: column;
     justify-content: space-between;
 
-    background-image: url(bg-card-front.png);
+    background-image: url(imagens/bg-card-front.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -157,7 +157,7 @@ label{
     transition: 0.5s;
 
     background-color: aqua;
-    background-image: url(bg-card-back.png);
+    background-image: url(imagens/bg-card-back.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
